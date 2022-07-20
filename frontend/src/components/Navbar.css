@@ -1,0 +1,43 @@
+.navbar-container {
+  display: grid;
+  width: 100%;
+  margin: auto;
+  height: 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 60px 1fr 60px;
+}
+
+.menu-list{
+  position: absolute;
+  list-style: none;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: white;
+  border-bottom: 1px solid black;
+  height: 100vh;
+}
+.menu-list-close{
+  display: none;
+}
+.search-bar{
+  margin: 20px auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.search-bar input{
+  width: 80%;
+  background-color: rgba(37, 17, 251, 0.163);
+  border-style: none;
+  padding: 5px 15px;
+  border-radius: 20px;
+}
+.menu-list li{
+  margin: 25px 10px;
+  font-weight: bold;
+}

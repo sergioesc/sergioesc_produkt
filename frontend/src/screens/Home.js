@@ -1,5 +1,5 @@
 import React from "react";
-import Product from "../components/Product.js";
+import ProductList from "../components/ProductList.js";
 export default function Home() {
   return (
     <div>
@@ -15,15 +15,13 @@ export default function Home() {
         </select>
       </div>
       <div>
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
-        <Product />
+        <ProductList />
+        <ProductList />
+        <ProductList />
+        <ProductList />
+        <ProductList />
+        <ProductList />
+
       </div>
     </div>
   );

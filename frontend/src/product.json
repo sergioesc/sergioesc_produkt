@@ -1,0 +1,14 @@
+[
+    {
+        "autor": "autor",
+        "title": "Sesh",
+        "tipe": "tipo de plataforma (gratuita, de paga para el publico)",
+        "description1": "Making parenting easier",
+        "description": "descripcion larga",
+        "linkProduct": "http://google.com",
+        "rating": "1",
+        "images": "",
+        "collaborators": "",
+        "comentaries": ""
+    }
+]

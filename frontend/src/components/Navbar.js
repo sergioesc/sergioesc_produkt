@@ -6,17 +6,23 @@ import {
   faUserAstronaut,
   faXmark,
 } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
+
 export default function Navbar() {
   const [menu, setMenu] = useState(true);
   return (
     <div className="navbar-container">
       <div className="menu-container centered">
-        <div className="menu-inner ">
-          <FontAwesomeIcon icon={faUserAstronaut} />
+        <div className="menu-inner">
+          <Link to="/auth" className="a-nd">
+            <FontAwesomeIcon icon={faUserAstronaut} />
+          </Link>
         </div>
       </div>
       <div className="logo-container centered">
-        <div className="logo-inner">logo</div>
+        <div className="logo-inner">
+          <Link to="/" className="a-nd">logo</Link>
+        </div>
       </div>
       <div className="user-container centered">
         <div className="user-inner">

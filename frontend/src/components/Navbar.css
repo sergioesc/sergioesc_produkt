@@ -9,7 +9,7 @@
   grid-template-columns: 60px 1fr 60px;
 }
 
-.menu-list{
+.menu-list {
   position: absolute;
   list-style: none;
   top: 40px;
@@ -21,23 +21,90 @@
   border-bottom: 1px solid black;
   height: 100vh;
 }
-.menu-list-close{
+.menu-list-close {
   display: none;
 }
-.search-bar{
+.search-bar {
   margin: 20px auto;
   width: 100%;
   display: flex;
   justify-content: center;
 }
-.search-bar input{
+.search-bar input {
   width: 80%;
   background-color: rgba(37, 17, 251, 0.163);
   border-style: none;
   padding: 5px 15px;
   border-radius: 20px;
 }
-.menu-list li{
+.menu-list li {
   margin: 25px 10px;
   font-weight: bold;
+}
+.prop-login {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+}
+.login-inner {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+}
+.login-container {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  align-items: center;
+  top: 100px;
+  background-color: white;
+}
+.login-container form {
+  width: 85%;
+  margin: 0 auto;
+}
+.login-container form p {
+  margin: 20px 0 10px 0;
+}
+.login-container form input {
+  width: 90%;
+  padding: 0;
+  outline: none;
+  padding: 5px 10px;
+}
+.small-container {
+  display: flex;
+  flex-direction: column;
+}
+.button-container {
+  width: 100%;
+  display: flex;
+  margin: 20px auto;
+  justify-content: center;
+}
+.button-container button {
+  padding: 7px 15px;
+  background-color: rgb(3, 3, 99);
+  color: white;
+  border-radius: 5px;
+}
+.button-container button:hover {
+  background-color: white;
+  color: rgb(3, 3, 99);
+  transition: 0.3s;
+}
+.prop-close {
+  width: 100%;
+  text-align: end;
+  margin: 5px 20px 0 0;
+}
+
+.close{
+  display: none;
 }

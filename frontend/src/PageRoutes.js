@@ -4,11 +4,13 @@ import ProductScreen from "./screens/ProductScreen.js";
 import Home from "./screens/Home.js";
 import Login from "./screens/Login.js";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { ToastContainer } from "react-toastify";
 
 function PageRoutes() {
   return (
     <div className="page-routes">
       <BrowserRouter>
+      <ToastContainer position="bottom-center" limit={5} />
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />

@@ -41,6 +41,29 @@
   margin: 25px 10px;
   font-weight: bold;
 }
+.popup-userExist {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  background-color: white;
+  width: 150px;
+  border: 1px solid black;
+  transition: all ease 0.2s;
+}
+
+.d-n {
+  display: none;
+  transition: all ease 0.2s;
+}
+
+.popup-userExist ul {
+  margin: 0 auto;
+  justify-content: center;
+  padding: 0;
+}
+.popup-userExist ul li {
+  list-style: none;
+}
 .prop-login {
   top: 0;
   left: 0;
@@ -105,6 +128,6 @@
   margin: 5px 20px 0 0;
 }
 
-.close{
+.close {
   display: none;
 }

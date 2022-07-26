@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./Navbar.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -7,21 +7,72 @@ import {
   faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import { Produkt } from "../Produkt.js";
 
 export default function Navbar() {
+  const { state, dispatch: ctxDispatch } = useContext(Produkt);
+  const { userInfo } = state;
+  const [existUser, setExistUser] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
+
+  const signoutHandler = () => {
+    ctxDispatch({ type: "USER_SIGNOUT" });
+    localStorage.removeItem("userInfo");
+    window.location.href = "/";
+  };
+
+  useEffect(() => {
+    if (userInfo) {
+      setExistUser(true);
+    } else {
+      setExistUser(false);
+    }
+  }, [setExistUser, userInfo]);
+
   const [menu, setMenu] = useState(true);
   return (
     <div className="navbar-container">
       <div className="menu-container centered">
         <div className="menu-inner">
-          <Link to="/auth" className="a-nd">
-            <FontAwesomeIcon icon={faUserAstronaut} />
-          </Link>
+          {existUser ? (
+            <div>
+              <FontAwesomeIcon
+                icon={faUserAstronaut}
+                onClick={() => {
+                  setShowPopup(!showPopup);
+                }}
+              />
+              {showPopup ? (
+                <div className="popup-userExist">
+                  <ul>
+                    <li onClick={() => {
+                  setShowPopup(!showPopup);
+                }}>
+                      <Link to="/perfil" className="a-nd">
+                        Mi perfil
+                      </Link>
+                    </li>
+                    <li onClick={signoutHandler}>Cerrar sesión</li>
+                  </ul>
+                </div>
+              ) : (
+                <div></div>
+              )}
+            </div>
+          ) : (
+            <div>
+              <Link to="/auth" className="a-nd">
+                <FontAwesomeIcon icon={faUserAstronaut} />
+              </Link>
+            </div>
+          )}
         </div>
       </div>
       <div className="logo-container centered">
         <div className="logo-inner">
-          <Link to="/" className="a-nd">logo</Link>
+          <Link to="/" className="a-nd">
+            logo
+          </Link>
         </div>
       </div>
       <div className="user-container centered">

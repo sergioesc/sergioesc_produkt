@@ -21,7 +21,6 @@ produktRouter.get("/produkt/:id", async (req, res) => {
 
 produktRouter.post(
   "/",
-  isAuth,
   expressAsyncHandler(async (req, res) => {
     const newProdukt = new Produkt({
       name: req.body.name,
@@ -32,7 +31,6 @@ produktRouter.post(
       description1: req.body.description1,
       externalLink: req.body.externalLink,
       rating: 0,
-      comentaries: 0,
     });
     const produkt = await newProdukt.save();
     res.send({ message: "Producto creado", produkt });

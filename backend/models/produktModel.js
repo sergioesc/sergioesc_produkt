@@ -9,12 +9,12 @@ const produktSchema = new mongoose.Schema(
   {
     name: { type: String, required: true },
     autor: { type: String, required: true },
-    images: { type: String, required: true },
+    images: { type: Array, required: true },
     category: { type: String },
     description: { type: String, required: true },
     description1: { type: String, required: true },
     externalLink: { type: String },
-    rating: { type: Number, required: true },
+    rating: { type: Number, required: true},
     comentaries: [commentSchema],
   },
   {

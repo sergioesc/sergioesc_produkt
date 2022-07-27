@@ -48,12 +48,12 @@
   background-color: white;
   width: 150px;
   border: 1px solid black;
-  transition: all ease 0.2s;
+  transition: all ease 0.1s;
 }
 
 .d-n {
   display: none;
-  transition: all ease 0.2s;
+  transition: all ease 0.1s;
 }
 
 .popup-userExist ul {

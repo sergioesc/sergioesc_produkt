@@ -7,10 +7,10 @@ import {
   faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import { Produkt } from "../Produkt.js";
+import { Auth } from "../Reducers.js";
 
 export default function Navbar() {
-  const { state, dispatch: ctxDispatch } = useContext(Produkt);
+  const { state, dispatch: ctxDispatch } = useContext(Auth);
   const { userInfo } = state;
   const [existUser, setExistUser] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
@@ -45,10 +45,12 @@ export default function Navbar() {
               {showPopup ? (
                 <div className="popup-userExist">
                   <ul>
-                    <li onClick={() => {
-                  setShowPopup(!showPopup);
-                }}>
-                      <Link to="/perfil" className="a-nd">
+                    <li
+                      onClick={() => {
+                        setShowPopup(!showPopup);
+                      }}
+                    >
+                      <Link to={`/miperfil/${userInfo._id}`} className="a-nd">
                         Mi perfil
                       </Link>
                     </li>

@@ -5,6 +5,7 @@ import Home from "./screens/Home.js";
 import Login from "./screens/Login.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { ToastContainer } from "react-toastify";
+import MyProfile from "./screens/MyProfile.js";
 
 function PageRoutes() {
   return (
@@ -16,6 +17,7 @@ function PageRoutes() {
           <Route path="/" element={<Home />} />
           <Route path="/product" element={<ProductScreen />} />
           <Route path="/auth" element={<Login />} />
+          <Route path="/miperfil/:id" element={<MyProfile />} />
         </Routes>
       </BrowserRouter>
     </div>

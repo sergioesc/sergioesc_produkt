@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { Produkt } from "../Produkt.js";
+import { Auth } from "../Reducers.js";
 import axios from "axios";
 import { toast } from "react-toastify";
 export default function Login() {
@@ -11,7 +11,7 @@ export default function Login() {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
-  const { state, dispatch: ctxDispatch } = useContext(Produkt);
+  const { state, dispatch: ctxDispatch } = useContext(Auth);
   const { userInfo } = state;
   const [authMode, setAuthMode] = useState("signin");
   const handleSubmitLogin = async (e) => {

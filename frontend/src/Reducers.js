@@ -1,5 +1,5 @@
 import { createContext, useReducer } from "react";
-export const Produkt = createContext();
+export const Auth = createContext();
 
 const initialState = {
   userInfo: localStorage.getItem("userInfo")
@@ -22,8 +22,8 @@ export function ProduktProvider(props) {
   const [state, dispatch] = useReducer(reducer, initialState);
   const value = { state, dispatch };
   return (
-    <Produkt.Provider value={value}>
+    <Auth.Provider value={value}>
       {props.children}
-    </Produkt.Provider>
+    </Auth.Provider>
   );
 }
